@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightblue;
+    background-image: url(back.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pre{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-image: url(pre.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 9999;
+}
+.boxMain{
+    position: relative;
+    width: 70%;
+    /* height: 500px; */
+    padding: 20px 40px;
+    border: 2px solid blue;
+    margin: 20px auto 150px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.object{
+    /* width: 90%; */
+    /* height: 200px; */
+    padding: 10px;
+    /* border: 2px solid black; */
+    margin: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box img{
+    width: 90%;
+    height: 90%;
+    /* margin: 10%; */
+    display: block;
+    position: absolute;
+    top: 5%; left: 5%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.place{
+    /* width: 90%; */
+    /* height: 200px; */
+    padding: 10px;
+    /* border: 2px solid black; */
+    margin: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+width: 16%;
+height: 70px;
+border: 1.5px solid red;
+background-color: white;
+margin: 2%;
+border-radius: 5px;
+text-transform: uppercase;
+text-align: center;
+line-height: 70px;
+font-weight: bolder;
+font-size: 14px;
+position: relative;
+cursor: default;
+overflow: hidden;
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    display: block;
+}
+.upper {
+    position: absolute;
+    left: 5%; top: 5%;
+    width: 90%;
+    height: 90%;
+    display: block;
+    background-color: rgba(255, 255, 255,0.7);
+    /* border: 2px solid blue; */
+    padding: 50px;
+    border-radius: 30px;
+}
+#mob{
+    display: none;
+}
+@media screen and (max-width: 850px){
+    .boxMain{
+        display: none;
+    }
+    #mob{
+        display: block;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Correct Place | Game Arsl</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="pre()">
+     <div class="pre"></div>
+    <div class="top p-3 text-center mt-3" id="top">
+        <h4 class="d-inline-block mx-4">Score: <span id="score">00</span></h4>
+        <button class="btn btn-success px-5 mx-5" onclick="typeNum()">Start Game</button>
+        <h4 class="d-inline-block text-uppercase" id="timer">remaing time <h4 id="timer2" class="d-inline-block ml-2">
+                00 : 00
+            </h4>
+        </h4>
+    </div>
+    <div class="boxMain">
+        <div class="object">
+            <div ondragover="dragOver(event)" class="box" id="obj1">
+                <img src="ONION.png" alt="Sorry" id="pic1" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj2">
+                <img src="CELERY.png" alt="Sorry" id="pic2" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj3">
+                <img src="BROCCOLI.png" alt="Sorry" id="pic3" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj4">
+                <img src="CAULIFLOWER.png" alt="Sorry" id="pic4" ondrag="drag(event)"
+                    ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj5">
+                <img src="GARLIC.png" alt="Sorry" id="pic5" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj6">
+                <img src="PEA.png" alt="Sorry" id="pic6" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj7">
+                <img src="RED-CABBAGE.png" alt="Sorry" id="pic7" ondrag="drag(event)"
+                    ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj8">
+                <img src="RED-PEPPER.png" alt="Sorry" id="pic8" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj9">
+                <img src="RADISH.png" alt="Sorry" id="pic9" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj10">
+                <img src="MUSHROOM.png" alt="Sorry" id="pic10" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj11">
+                <img src="GREEN-PREPPER.png" alt="Sorry" id="pic11" ondrag="drag(event)"
+                    ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj12">
+                <img src="EGGPLANT.png" alt="Sorry" id="pic12" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj13">
+                <img src="CORN.png" alt="Sorry" id="pic13" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj14">
+                <img src="CARROT.png" alt="Sorry" id="pic14" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <div ondragover="dragOver(event)" class="box" id="obj15">
+                <img src="TOMATO.png" alt="Sorry" id="pic15" ondrag="drag(event)" ondragstart="dragStart(event)">
+            </div>
+            <!-- <div class="box"><img src="16.png" alt="Sorry"></div> -->
+        </div>
+        <div class="place">
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc2">celery</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc6">RED-CABBAGE</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc3">cauliflower</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc1">onion</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc13">green-prepper</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc5">red-pepper</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc4">broccoli</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc11">carrot</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc8">garlic</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc9">radish</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc15">tomato</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc10">mushroom</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc7">pea</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc14">eggplant</div>
+            <div ondrop="drop(event)" ondragover="dragOver(event)" class="box" id="plc12">corn</div>
+            <!-- <div class="box"></div> -->
+        </div>
+
+        <div class="upper" id="upper">
+            <h6 class="text-center bg-primary text-light p-3 my-2 rounded-lg text-uppercase" style="line-height: 30px;">
+                Place the vegetables where their names are written</h6>
+            <h2 onclick="typeNum()" style="cursor: pointer;"
+                class="text-center bg-success rounded-pill text-light my-5 p-3 font-weight-bold ">Start The Game.</h2>
+
+            <h5 class="text-center bg-dark text-light p-5 rounded-lg text-uppercase" style="line-height: 30px;">Hello
+                dear player! <br>If you score 100 before the time is up, you will win. <br> Otherwise you will
+                lose the game.</h5>
+            <h6 class="text-center bg-secondary text-light p-3 my-5 rounded-lg text-uppercase"
+                style="line-height: 30px;">
+                This game is developed by <a href="https://www.facebook.com/ThaheemSahab786"
+                    class="text-light ml-1 font-weight-bolder">Arsl
+                    Thaheem</a></h6>
+        </div>
+        <div class="upper" id="upper2" style="display: none;">
+            <img src="win.gif" alt="Sorry" style="width: 100%; height: 100%; border-radius: 20px;" draggable="false">
+            <H1 id="scoreHead" class="bg-light text-primary font-weight-bold p-3 text-center w-75" style="position: absolute; bottom: 7%; left: 12%; border-radius: 15px;" > Your Score Is : 00</H1>
+        </div>
+
+    </div>
+    <h1 class="text-center bg-primary m-5 p-5 font-weight-bolder text-light" id="mob" style="line-height: 80px;">Your System is Not Support. <br> Please Use Desktop or LapTop!</h1>
+
+    <footer class="bg-dark pt-2 pb-0 text-light text-center px-5">
+        <p class="d-block">Copy Right @2021 | Arsl Thaheem <a href="tel:+923445982251">#Contact |</a> <a
+                href="https://www.facebook.com/ThaheemSahab786" target="_blank"> Facebook</a></p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
